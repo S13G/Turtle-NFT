@@ -1,0 +1,195 @@
+
+:root{
+    --background: rgb(0,74,173);
+    --gradient: linear-gradient(176deg, rgba(0,74,173,1) 0%, rgba(84,110,120,1) 100%);
+    --water-gradient: linear-gradient(#04619F,#36669d);
+}
+
+
+@media only screen and (max-width:1000px) {
+    .header{
+        flex-direction: column;
+    }
+    .why-us .items{
+        gap: 1rem;
+    }
+    .why-us .items .item h2{
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+    .maps{
+        gap: 10rem;
+    }
+    .maps:nth-child(3){
+        gap: 8rem;
+    }
+
+}
+
+@media only screen and (max-width:950px){
+    .maps{
+        gap: 1rem;
+    }
+    .maps:nth-child(3){
+        gap: 1rem;
+    }
+    .links{
+        position: absolute;
+        flex-direction: column;
+        top: 100%;
+        background:var(--background);
+        width: 50%;
+        padding: 4rem 1rem;
+        left: 0;
+        transform: translate(-100%);
+        transition: .5s ease;
+    }
+    .links.active{
+        transform: translate(0);
+    }
+    .links .link{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.274);
+        width: 100%;
+        padding-bottom: 5px;
+        padding-left: 1rem;
+    }
+    .menu i{
+        display: block;
+    }
+    .about{
+        flex-direction: column;
+    }
+    .why-us .items{
+       grid-template-columns: 1fr 1fr;
+       gap: 2rem;
+    }
+    .team .members{
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+}
+
+
+@media only screen and (max-width:750px) {
+    .mbl-maps{
+        flex-direction: column;
+        display: flex !important;
+    }
+    .mbl-maps .linker{
+        display: none;
+    }
+    .maps{
+        display: none;
+    }
+}
+
+@media only screen and (max-width:650px) {
+    .why-us .items{
+        grid-template-columns: 1fr;
+    }
+    .team .members{
+        grid-template-columns: 1fr;
+    }
+    .navbar, .header, .why-us, .slider, .about, .team, .roadmap, .faq, .footer{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+
+@media only screen and (max-width:600px) {
+    .links{
+        width: 94% !important;
+        left: 0;
+        right: 0;
+        margin: 0 1rem;
+        border-radius: 10px;
+    }
+    .header .right img{
+        width: 100%;
+    }
+
+}
+
+
+
+@media only screen and (max-width:550px) {
+    .maps{
+        margin: 1rem 0;
+    }
+    .maps .map{
+        width: 100%;
+        margin: 0;
+    }
+    .imgleft{
+        right: 0%;
+        left: 81%;
+        transform: rotateY(360deg);
+    }
+    .bubbles{
+        display: none;
+    }
+    .heading h1, .about-heading h1{
+        font-size: 3rem;
+        line-height: 2.5rem;
+    }
+    .maps .map .img img{
+        width: 4rem;
+        right: 0%;
+    }
+    .header .left h1{
+        font-size: 5rem;
+        line-height: 4rem;
+    }
+}
+
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+/*mobile-view*/
+@media screen and (max-width: 767px) {
+    .main-section-wrapper {
+        flex-direction: column;
+    }
+    .main-section-sidebar {
+        width: 100%;
+        position: relative;
+        margin-bottom: 30px;
+        padding-top: 0;
+    }
+
+    .main-section-content {
+        width: 100%;
+    }
+
+    .card-grid-container {
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 0;
+    }
+}
+
+
+
+/*tab-portrait*/
+@media (min-width: 768px) and (max-width: 991px) {
+    .main-section-sidebar {
+        width: 30%;
+        position: relative;
+        margin-bottom: 30px;
+        padding-top: 0;
+    }
+
+    .main-section-content {
+        width: 70%;
+    }
+
+    .card-grid-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 0;
+    }
+
+}

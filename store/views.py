@@ -1,5 +1,4 @@
 from django.contrib import messages
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
@@ -22,28 +21,11 @@ class ProductDetail(DetailView):
     template_name = 'store/product-detail.html'
 
 # Product Listing
-def product_list(request):
-    products_list = Product.objects.select_related('category').all()
-    page = request.GET.get('page', 1)
-    paginator = Paginator(products_list, 5)
-
-    # Page Pagination
-    try:
-        products = paginator.page(page)
-    except PageNotAnInteger:
-        products = paginator.page(1)
-    except EmptyPage:
-        products = paginator.page(paginator.num_pages)
-    
-    #passing website settings dummy stats
-    Settings.objects.get_or_create(id=1)
-    
-    context = {"products": products}
-    context['settings'] = Settings.objects.first()
-
-    if context['settings']:
-        os.environ['web_name'] = context['settings'].title
-    return render(request, 'store/index.html', context)
+def marketplace(request):
+    products = Product.objects.select_related('category').all()
+    categories = Category.objects.all()
+    context = {"products": products, "categories": categories}
+    return render(request, 'store/marketplace.html', context)
 
 # Category filter
 def category_view(request, slug):
@@ -59,10 +41,20 @@ def category_view(request, slug):
 def search_view(request):
     results = []
     if request.method == "GET":
-        query = request.GET.get("q")
+        query = request.GET.get("")
         if query == '':
             query = 'None'
         results = Product.objects.filter(Q(name__icontains=query) | Q(price__icontains=query) | Q(description__icontains=query))
     context = {"query": query, "results": results}
     return render(request, 'store/search.html', context)
+
+
+def main_page(request):
+    Settings.objects.get_or_create(id=1)
+    
+    context = {"settings": Settings.objects.first()}
+
+    if context['settings']:
+        os.environ['web_name'] = context['settings'].trade_mark
+    return render(request, 'base.html')
    

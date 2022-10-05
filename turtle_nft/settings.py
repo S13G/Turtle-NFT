@@ -185,10 +185,10 @@ try:
     if name:
         web_name = name
 
-    web_name = "TURTLE NFT"
+    web_name = "THE TURTLES NFT"
 
 except:
-    web_name = "TURTLE NFT"
+    web_name = "THE TURTLES NFT"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

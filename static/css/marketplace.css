@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'League Spartan', sans-serif;
+}
+
+
+:root{
+    --background: rgb(0,74,173);
+    --gradient: linear-gradient(176deg, rgba(0,74,173,1) 0%, rgba(84,110,120,1) 100%);
+    --water-gradient: linear-gradient(#04619F,#36669d);
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+
+:root{
+    --background: rgb(0,74,173);
+    --gradient: linear-gradient(176deg, rgba(0,74,173,1) 0%, rgba(84,110,120,1) 100%);
+    --water-gradient: linear-gradient(#04619F,#36669d);
+}
+
+::selection{
+    background-color: lightgray;
+    color: var(--background);
+}
+
+
+/* navbar */
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 5rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(215, 215, 215, 0.57);
+    z-index: 35534534534;
+}
+.navbar .logo img{
+    width: 4rem;
+}
+.navbar .links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.navbar .links a{
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+ .badge:after{
+    content:'Coming soon';
+    font-size:12px;
+    color: #fff;
+    border-radius: 30%;
+    background: rgba(255, 255, 255, 0.176);
+    padding: 5px 7px;
+    position:relative;
+    left:-30px;
+    top:-20px;
+}
+
+.badge1:after{
+    content:'Coming soon';
+    font-size:12px;
+    color: #fff;
+    border-radius: 30%;
+    background: rgba(255, 255, 255, 0.176);
+    padding: 5px 7px;
+    position:relative;
+    left:-40px;
+    top:-40px;
+}
+/* navbar */
+
+
+.btn{
+    padding: .5rem 5rem;
+    border-radius: 30px;
+    transition: .5s;
+    font-size: 11.rem;
+    font-weight: 500;
+    border: 4px solid rgba(255, 255, 255, 0.249);
+    box-shadow: inset 0 0 10px rgb(0,74,173);
+    color: rgb(0,74,173);
+    background: #fff;
+}
+.btn:hover{
+    color: #fff;
+    background: var(--gradient);
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.371);
+    border: 4px solid  rgb(0,74,173);
+}
+
+
+.header-section {
+    background: rgb(19,82,163);
+    background: linear-gradient(180deg, rgba(19,82,163,1) 0%, rgba(78,110,121,1) 100%);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    height: 250px; 
+}
+
+.header-section h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+    margin-top: 95px;
+    margin-bottom: 15px;
+}
+
+.breadcump-navigation {
+    display: flex;
+    justify-content: center;
+}
+
+.breadcump-navigation a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.home-link {
+    position: relative;
+}
+
+.home-link::after {
+    content: '/';
+    padding: 0 10px;
+}
+
+.main-section-wrapper {
+    display: flex;
+    background-color: var(--water-gradient);
+    padding: 20px;
+}
+
+.main-section-sidebar-wrapper {
+    padding: 15px;
+    background: rgb(19,82,163);
+    background: linear-gradient(90deg, rgba(19,82,163,1) 0%, rgba(78,110,121,1) 100%);
+    border-radius: 15px;
+}
+.main-section-sidebar {
+    width: 25%;
+    height: 100%;
+    position: sticky;
+    padding-top: 30px;
+    top: 20px;
+}
+
+/* main section */
+.main-section-content {
+    width: 75%;
+}
+
+.card-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 10px;
+    grid-column-gap: 30px;
+}
+
+.grid-item-card {
+    padding: 20px;
+    text-align: center;
+}
+
+.grid-item-card h4 {
+    color: #fff;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.card-img-wrapper img {
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.card-img-wrapper {
+    margin-bottom: 10px;
+}
+
+.card-btn-inner-txt-wrapper {
+    display: block;
+    border: 1px solid #000;
+    border-radius: 24px;
+    color: #000;
+    padding: 5px 0px;
+}
+
+
+/* sidebar */
+
+input.search-input {
+    padding: 10px 15px;
+    margin-top: 8px;
+    font-size: 17px;
+    background: transparent;
+    width: 90%;
+    border-radius: 25px;
+    outline: none;
+    color: #fff;
+    border: 1px solid #abd1e1;
+}
+
+input.search-input::placeholder {
+    color: #fff;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+  -webkit-box-shadow: 0 0 0 30px rgb(19,82,163) inset;
+  -webkit-text-fill-color: #fff !important;
+}
+
+button.submit {
+    position: relative;
+    top: 6px;
+    background: transparent;
+    border: none;
+    right: 40px;
+}
+
+.search-icon-wrapper {
+    position: relative;
+}
+
+.search-icon-wrapper svg {
+    fill: #fff;
+    width: 20px;
+    position: absolute;
+    right: 15px;
+    top: 21px;
+    cursor: pointer;
+}
+
+
+.sidenav {
+    z-index: 1;
+    background-color: transparent;
+    overflow-x: hidden;
+    margin-top: 20px;
+}
+   
+
+.sidenav a, .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+
+.sidenav a {
+    font-size: 16px;
+}
+
+button.dropdown-btn {
+    font-weight: 500;
+    font-size: 18px;
+}
+  
+
+.sidenav a:hover, .dropdown-btn:hover {
+    color: #f1f1f1;
+}
+
+.dropdown-container {
+    display: none;
+    padding-left: 8px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.dropdown-container:last-child {
+    border-bottom: none;
+}
+  
+span.dropdown-icon svg {
+    display: inline-block;
+    width: 15px;
+    fill: #fff;
+    float: right;
+}
+
+
+
+/* footer */
+.footer {
+    padding: 2rem 5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.349);
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+
+.footer-social a i {
+    color: #fff;
+    font-size: 2rem;
+    transition: .5s;
+}
+
+.footer-social a i:hover {
+    color: var(--color1);
+}
+
+.copyright {
+    font-size: 1.1rem;
+    color: lightgray;
+    text-transform: capitalize;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.privacy-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.privacy-links a {
+    color: #fff;
+    transition: .5s ease;
+}
+
+.privacy-links a:hover {
+    color: var(--background);
+}
+
+/* footer */
+body{
+    background-image: url(assets/header.png) !important;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+/*mobile-view*/
+@media screen and (max-width: 767px) {
+    .main-section-wrapper {
+        flex-direction: column;
+    }
+    .main-section-sidebar {
+        width: 100%;
+        position: relative;
+        margin-bottom: 30px;
+        padding-top: 0;
+    }
+
+    .main-section-content {
+        width: 100%;
+    }
+
+    .card-grid-container {
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 0;
+    }
+}
+
+
+
+/*tab-portrait*/
+@media (min-width: 768px) and (max-width: 991px) {
+    .main-section-sidebar {
+        width: 30%;
+        position: relative;
+        margin-bottom: 30px;
+        padding-top: 0;
+    }
+
+    .main-section-content {
+        width: 70%;
+    }
+
+    .card-grid-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 0;
+    }
+
+}
+
+/* animtions */
+
+.bubbles .bubble {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 0;
+    border-radius: 46% 54% 40% 60% / 46% 41% 59% 54% ;
+    box-shadow: 0 0 10px white inset;
+    transform: translateY(100%);
+    animation-name: getDown;
+    animation-iteration-count: infinite;
+    z-index: 1;
+}
+
+@keyframes getDown {
+    0%{
+        transform: translateY(100%) rotate(0);
+    } 100% {
+        transform: translateY( calc(-100vh + 100%) ) rotate(360deg);
+    }
+}
+/* animtions */
