@@ -1,4 +1,5 @@
 from django.contrib import messages
+from django.db.models import Q
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 from store.models import Product, Category
@@ -33,29 +34,13 @@ def CategoryViews(request, slug):
     return render(request, "store/product-filter.html", context)
 
 
-# class ProductFilter(ListView):
-#     template_name = 'store/product-filter.html'
-
-#     def get_queryset(self):
-#         category_id = self.kwargs['id']
-#         category = Category.objects.get(id=category_id)
-#         return Product.objects.filter(category__slug=slug)
-    
-#     def get_context_data(self, **kwargs):
-#         context = super().get_context_data(**kwargs)
-#         categories = Category.objects.get(id=self.kwargs['id'])
-#         context["categories"] = context["categories"].filter(category=category)
-#         return context
-     
-    # def get_queryset(self):
-    #     self.products = Product.objects.select_related('category').all()
-    #     self.categories = Category.objects.all()
-    #     return [self.products, self.categories]
-    
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     context['products'] = Product.objects.select_related('category').all()
-    #     context['categories'] = Category.objects.all()
-    #     return context
-    
- 
+def SearchView(request):
+    results = []
+    if request.method == "GET":
+        query = request.GET.get("q")
+        if query == '':
+            query = 'None'
+        results = Product.objects.filter(Q(name__icontains=query) | Q(price__icontains=query) | Q(description__icontains=query))
+    context = {"query": query, "results": results}
+    return render(request, 'store/search.html', context)
+   

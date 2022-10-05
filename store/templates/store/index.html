@@ -2,7 +2,7 @@
 {% load static %}
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8">  
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
@@ -10,6 +10,10 @@
 <body>
     {% block body %}
         <ul>
+        <form action="{% url 'search' %}" method="GET">
+            {% csrf_token %}
+            <input class="search" type="text" name="q" placeholder="Search Encyclopedia">
+        </form>
         {% for product in products %}
             <li><a href="{% url 'product-detail' product.slug %}">{{ product.name }}</a></li>
             <li>{{ product.description }}</li>

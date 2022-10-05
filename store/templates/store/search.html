@@ -1,0 +1,36 @@
+
+{% block body %}
+<h1>Search</h1>
+
+
+{% if query %}
+
+           <h2>
+
+           {% with results.count as total_results %}
+
+           Found {{ total_results }} result{{ total_results|pluralize }}
+
+           {% endwith %}
+
+           </h2>
+
+   {% for c in results %}
+
+  <h3>{{c.name}}</h3>
+  <img style="max-width: 300px" src={{ c.image.url }}/>
+  <li>{{ c.price }}</li>
+
+  <h3>{{c.category}}</h3>
+
+
+   {% empty %}
+
+   <h3>No results found.</h3>
+
+   {% endfor %}
+
+  {% endif %}
+
+
+{% endblock %}
