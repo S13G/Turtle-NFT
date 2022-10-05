@@ -661,14 +661,14 @@ details[open] div {
     color: #FFF;
     display: none;
 }
-body{
-    background-image: url(assets/header.png) !important;
+
+body {
+    background-image: url(/assets/header.png) !important;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-
 
 
 .header-section {

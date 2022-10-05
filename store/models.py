@@ -5,7 +5,7 @@ from django.core.validators import MinValueValidator
 
 
 class Category(models.Model):
-    name = models.CharField(max_length=255, null=True)
+    name = models.CharField(max_length=255, null=True, blank=True)
     slug = models.SlugField(blank=True, null=True)
 
     class Meta:
@@ -17,7 +17,7 @@ class Category(models.Model):
     
 
 class Product(models.Model):
-    name = models.CharField(max_length=255, null=True)
+    name = models.CharField(max_length=255, null=True, blank=True)
     slug = models.SlugField(blank=True, null=True)
     image = models.ImageField(default='default.png', null=True, blank=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, blank=True, null=True, related_name='products')

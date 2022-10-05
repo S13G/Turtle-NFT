@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="The Turtles NFT">
+    <meta name="description"
+        content=" The Turtles have a different view of the world, a view that encompasses web3 and web2">
+    <meta name="keywords" content="Nft, Tosinpeter, The Turtle Nft">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="author" content="Tosinpeter">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <!-- slider lib -->
+    <link rel="stylesheet" type="text/css" href="cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- slider lib -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <!-- jquery cdn -->
+    <script src="{% static 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js' %}"></script>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title> The Turtles NFT</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'manifest/site.webmanifest' %}">
+</head>
+
+<body>
+
+
+    <!-- navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="{% static 'assets/logo.png' %}" alt="">
+        </div>
+        <div class="menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="links">
+            <a href="#" class="link">Home</a>
+            <a href="#whyus" class="link">Why Us</a>
+            <a href="#team" class="link">Team</a>
+            <a href="#roadmap" class="link">Roadmap</a>
+            <a href="#faq" class="link">Faq</a>
+            <a href="#" class="link">WhitePaper</a>
+            <a href="marketplace.html" class="link badge">
+                Marketplace
+            </a>
+        </div>
+        <div class="btnn">
+            <a href="#" class="btn">Connect Wallet</a>
+        </div>
+    </div>
+    <!-- navbar -->
+{% block body %}
+    <!-- header -->
+    <div class="header">
+        <div class="left">
+            <div class="sale-buy">
+                <div class="left">
+                    Mint Date : TBA
+                </div>
+                <div class="right0">
+                    Mint Price : TBA
+                </div>
+                <div class="right">
+                    Supply : 3333
+                </div>
+            </div>
+            <h1>
+                The Turtles NFT
+            </h1>
+            <p>
+                The Turtles have a different view of the world, a view that encompasses web3 and web2, we believe that
+                both webs have been walking in parallel for a long time, and the time has come to make them meet and
+                share the same space, we introduce the "TurtlePlace".
+            </p>
+            <br>
+            <a style="margin-top:5rem ;"  class="btn ">Buy Now</a> <a class="badge1"></a>
+        </div>
+        <div class="right">
+            <img src="{% static 'assets/site.png' %}" alt="">
+        </div>
+    </div>
+
+    <div class="mainContainer">
+
+        <div class="wave top red"
+            style="clip-path: polygon(0% 0%, 0% 82.5%, 1.69492% 84.3293%, 3.38983% 86.1385%, 5.08475% 87.9078%, 6.77966% 89.6179%, 8.47458% 91.25%, 10.1695% 92.7862%, 11.8644% 94.2098%, 13.5593% 95.505%, 15.2542% 96.6578%, 16.9492% 97.6555%, 18.6441% 98.487%, 20.339% 99.1435%, 22.0339% 99.6176%, 23.7288% 99.9041%, 25.4237% 100%, 27.1186% 99.9041%, 28.8136% 99.6176%, 30.5085% 99.1435%, 32.2034% 98.487%, 33.8983% 97.6555%, 35.5932% 96.6578%, 37.2881% 95.505%, 38.9831% 94.2098%, 40.678% 92.7862%, 42.3729% 91.25%, 44.0678% 89.6179%, 45.7627% 87.9078%, 47.4576% 86.1385%, 49.1525% 84.3293%, 50.8475% 82.5%, 52.5424% 80.6708%, 54.2373% 78.8616%, 55.9322% 77.0922%, 57.6271% 75.3821%, 59.322% 73.75%, 61.017% 72.2138%, 62.7119% 70.7902%, 64.4068% 69.495%, 66.1017% 68.3422%, 67.7966% 67.3446%, 69.4915% 66.513%, 71.1864% 65.8565%, 72.8814% 65.3824%, 74.5763% 65.0959%, 76.2712% 65%, 77.9661% 65.0959%, 79.661% 65.3824%, 81.3559% 65.8565%, 83.0509% 66.513%, 84.7458% 67.3446%, 86.4407% 68.3422%, 88.1356% 69.495%, 89.8305% 70.7902%, 91.5254% 72.2138%, 93.2203% 73.75%, 94.9153% 75.3821%, 96.6102% 77.0922%, 98.3051% 78.8616%, 100% 80.6708%, 100% 0%); shape-outside: polygon(0% 0%, 0% 82.5%, 1.69492% 84.3293%, 3.38983% 86.1385%, 5.08475% 87.9078%, 6.77966% 89.6179%, 8.47458% 91.25%, 10.1695% 92.7862%, 11.8644% 94.2098%, 13.5593% 95.505%, 15.2542% 96.6578%, 16.9492% 97.6555%, 18.6441% 98.487%, 20.339% 99.1435%, 22.0339% 99.6176%, 23.7288% 99.9041%, 25.4237% 100%, 27.1186% 99.9041%, 28.8136% 99.6176%, 30.5085% 99.1435%, 32.2034% 98.487%, 33.8983% 97.6555%, 35.5932% 96.6578%, 37.2881% 95.505%, 38.9831% 94.2098%, 40.678% 92.7862%, 42.3729% 91.25%, 44.0678% 89.6179%, 45.7627% 87.9078%, 47.4576% 86.1385%, 49.1525% 84.3293%, 50.8475% 82.5%, 52.5424% 80.6708%, 54.2373% 78.8616%, 55.9322% 77.0922%, 57.6271% 75.3821%, 59.322% 73.75%, 61.017% 72.2138%, 62.7119% 70.7902%, 64.4068% 69.495%, 66.1017% 68.3422%, 67.7966% 67.3446%, 69.4915% 66.513%, 71.1864% 65.8565%, 72.8814% 65.3824%, 74.5763% 65.0959%, 76.2712% 65%, 77.9661% 65.0959%, 79.661% 65.3824%, 81.3559% 65.8565%, 83.0509% 66.513%, 84.7458% 67.3446%, 86.4407% 68.3422%, 88.1356% 69.495%, 89.8305% 70.7902%, 91.5254% 72.2138%, 93.2203% 73.75%, 94.9153% 75.3821%, 96.6102% 77.0922%, 98.3051% 78.8616%, 100% 80.6708%, 100% 0%);">
+
+        </div>
+    </div>
+    <!-- header -->
+
+
+    <!-- why us -->
+    <div class="why-us" id="whyus">
+        <div class="heading">
+            <h1>Why Hold <br> The Turtles</h1>
+        </div>
+        <div class="items" >
+            <div class="item">
+                <i class="fa-solid fa-laptop"></i>
+                <h2>Marketplace Reward</h2>
+                <p>
+                    TurtlePlace only accepts purchases with TTC, Real life items, no only web3 ones. Every week we will
+                    renew the store's stock and add more items (Worldwide shipping). This is not a common marketplace
+                    this is a TurtlePlace.
+                </p>
+            </div>
+            <div class="item" id="whyus">
+                <i class="fa-solid fa-chalkboard-user"></i>
+                <h2>The Turles Club</h2>
+                <p>
+                    Be part of the most exclusive DAO of the solana ecosystem. With the best team, and the best network.
+                    You can rent BOTs paying with $TTC Token and Solana.
+                </p>
+            </div>
+            <div class="item">
+                <i class="fa-solid fa-network-wired"></i>
+                <h2>Help the turtles</h2>
+                <p>
+                    We will donate 10% of the weekly royalties to NGOs dedicated to taking care of turtles.With our
+                    commitment to the environment, we must help, and consequently our community will be helping too! We
+                    encourage NGOs that care for turtles, we recommend you do the same.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- why us -->
+
+    <!-- about -->
+    <div class="about">
+        <div class="left">
+            <div class="about-heading">
+                <h1>Marketplace</h1>
+            </div>
+            <div class="about-content">
+                <p>The "TurlesPlace", the marketplace that will revolutionize the web3, will only accept purchases with
+                    $TTC token (token that holders will earn through the stake).</p>
+                <p> At TurtlesPlace you will be able to buy items from web3 and real life, for example: NFT, Giftcards,
+                    Consoles (PlayStation, Xbox, Nintendo...) and Hype Clothes/Sneakers. With worldwide shipping all of
+                    this can be delivered to your home.</p>
+                    <br>
+                <a class="btn">Goto Marketplace</a> <a class="badge1"></a>
+            </div>
+        </div>
+        <div class="right">
+            <img src="{% static 'assets/3.png' %}" alt="">
+        </div>
+    </div>
+    <div class="slider">
+        <img src="{% static 'assets/1.png' %}" alt="">
+        <img src="{% static 'assets/2.png' %}" alt="">
+        <img src="{% static 'assets/3.png' %}" alt="">
+        <img src="{% static 'assets/4.png' %}" alt="">
+        <img src="{% static 'assets/5.png' %}" alt="">
+    </div>
+    <!-- about -->
+
+
+
+    <!-- team -->
+    <div class="team" id="team">
+        <div class="heading">
+            <h1>
+                Our Team
+            </h1>
+        </div>
+        <div class="members">
+
+            <div class="member">
+                <img src="{% static 'assets/1.png' %}" alt="">
+                <p class="name">
+                    Reek0
+                </p>
+                <p class="detail">
+                    veteran in the world of cryptos and NFTs, master of business, I love turtles and I am aware that they need help, now we are building something, but it's probably nothing, working full time on The Turtles and web3, always be better... 
+                </p>
+                <a href="https://twitter.com/Reek0Sol" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+
+            <div class="member">
+                <img src="{% static 'assets/6.png' %}" alt="">
+                <p class="name">
+                    Floop
+                </p>
+                <p class="detail">
+                    I've worked in big companies in the marketing area, but 3 years ago I got really interested in web3
+                    and I fell in love with NFT. I've bought and sold many gigantic projects. Nowadays I only work with
+                    web3 and I will fulfill my dream of launching my project. Still able to help the turtles
+                </p>
+                <a href="https://twitter.com/FloopSOL" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+            <div class="member">
+                <img src="{% static 'assets/4.png' %}" alt="">
+                <p class="name">
+                    Datt
+                </p>
+                <p style="padding-bottom:3.4rem ;" class="detail">
+                    Programming, marketing and web3 blockchain lover, for many years I worked in the administration and
+                    marketing of a company in my city. I've always loved turtles and putting these two things together
+                    was just amazing. Let's go Turtles!
+                </p>
+                <a  href="https://twitter.com/DattNFT" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- team -->
+
+
+    <!-- roadmap -->
+    <div class="roadmap" id="roadmap">
+        <div class="heading">
+            <h1>
+                Our RoadMap
+            </h1>
+        </div>
+        <div class="maps">
+            <div class="map">
+                <div class="data" style="padding-left:20px;">
+                    <h3><span class="span">1</span> THE TURTLES - MINT</h3>
+                    <p>
+                        The big day, the day that everyone is waiting for, launch of The Turtles, at this point, a lot of things are ready and launched. Prepare to be part of The Turtles Club.
+                    </p>
+                </div>
+                <div class="img">
+                    <img width: 300; class="imglef" src="{% static 'assets/Frame 1.png' %}" alt="">
+                </div>
+                <img class="linker" src="{% static 'assets/link.png' %}" alt="">
+            </div>
+            <div class="map">
+                <img class="linker linker7 linker4" src="{% static 'assets/link.png' %}" alt="">
+                <div class="data">
+                    <h3><span class="span">7</span> DONATION</h3>
+                    <p>
+                        We will donate 10% of the weekly royalties to NGOs dedicated to taking care of turtles. This is a important act, you should to it too.
+                    </p>
+                </div>
+                <div class="img">
+                    <img src="{% static 'assets/Frame 1 copy.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="maps">
+            <div class="map">
+                <div class="data">
+                    <h3> <span class="span">2</span> STAKE</h3>
+                    <p>
+                        With staking you will earn TTC Token, you receive a bonus for the time you stake, 15 days and 30 days, lockup time of 2 days. Stake more to earn more.
+                    </p>
+                </div>
+                <div class="img">
+                    <img src="{% static 'assets/02.png' %}" alt="">
+                </div>
+                <img class="linker linker2" src="{% static 'assets/link.png' %}" alt="">
+
+            </div>
+            <div class="map">
+                <div class="data" style="padding-left:20px; padding-right:20px;">
+                    <img class="linker linker5 linker4" src="{% static 'assets/link.png' %}" alt="">
+                    <h3><span class="span">6</span> DAO / COMMUNITY</h3>
+                    <p>
+                        Our DAO is called "The Turtles Club", very exclusive DAO, only for The Turtles holders, with the best alpha callers/hunters, you can rent BOTs using TTC Token via The Turtles Club.
+                    </p>
+                </div>
+                <div class="img">
+                    <img class="imglef" src="{% static 'assets/06.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="maps">
+            <div class="map" >
+                <div class="data"> 
+                    <h3><span class="span">3</span> TOKEN</h3>
+                    <p>
+                        TTC Token (The Turtles Club Token) will be generated from stake, you can also earn it by giveaways. With TTC you can buy products on our marketplace and participate in raffles/auctions.
+                    </p>
+                </div>
+                <div class="img">
+                    <img class="imglef" src="{% static 'assets/03.png' %}" alt="">
+                </div>
+                <img class="linker linker3" src="{% static 'assets/link.png' %}" alt="">
+            </div>
+            <div class="map">
+                <img class="linker linker4" src="{% static 'assets/link.png' %}" alt="">
+                <div class="data">
+                    <h3><span class="span">5</span> RAFFLES/AUCTION</h3>
+                    <p>
+                        With the TTC token you can participate in our raffles/auctions through our Raffles/Auctions House, having the chance to win very valuable items and NFTs.
+                    </p>
+                </div>
+                <div class="img">
+                    <img src="{% static 'assets/05.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="maps">
+            <div class="map">
+                <div class="data">
+                    <h3><span class="span">4</span> MARKETPLACE</h3>
+                    <p>
+                        TurtlePlace only accepts purchases with TTC, will be sold from gift cards to video games consoles. Every week we will renew the store's stock and add more varieties (worldwide shipping).
+                    </p>
+                </div>
+                <div class="img">
+                    <img src="{% static 'assets/04.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="mbl-maps maps">
+            <div class="map">
+                <div class="data">
+                    <h3><span class="span">1</span> The Turtles - Mint</h3>
+                    <p>
+                        The big day, the day that everyone is waiting for, launch of The Turtles, at this point, a lot of things are ready and launched. Prepare to be part of The Turtles Club.
+                    </p>
+                </div>
+               
+                <img class="linker" src="{% static 'assets/link.png' %}" alt="">
+            </div>
+            <div class="map">
+                <img class="linker linker7 linker4" src="{% static 'assets/link.png' %}" alt="">
+                <div class="data">
+                    <h3><span class="span">2</span> STAKE</h3>
+                    <p>
+                        With staking you will earn TTC Token, you receive a bonus for the time you stake, 15 days and 30 days, lockup time of 2 days. Stake more to earn more.
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="mbl-maps maps">
+            <div class="map">
+                <div class="data">
+                    <h3> <span class="span">3</span> TOKEN</h3>
+                    <p>
+                        TTC Token (The Turtles Club Token) will be generated from stake, you can also earn it by giveaways. With TTC you can buy products on our marketplace and participate in raffles/auctions.
+                    </p>
+                </div>
+                
+                <img class="linker linker2" src="{% static 'assets/link.png' %}" alt="">
+
+            </div>
+            <div class="map">
+                <div class="data">
+                    <img class="linker linker5 linker4" src="{% static 'assets/link.png' %}" alt="">
+                    <h3><span class="span">4</span> MARKETPLACE</h3>
+                    <p>
+                        TurtlePlace only accepts purchases with TTC, will be sold from gift cards to video games consoles. Every week we will renew the store's stock and add more varieties (worldwide shipping).
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="mbl-maps maps">
+            <div class="map">
+                <div class="data">
+                    <h3><span class="span">5</span> RAFFLES/AUCTION</h3>
+                    <p>
+                        With the TTC token you can participate in our raffles/auctions through our Raffles/Auctions House, having the chance to win very valuable items and NFTs.
+                    </p>
+                </div>
+               
+                <img class="linker linker3" src="{% static 'assets/link.png' %}" alt="">
+            </div>
+            <div class="map">
+                <img class="linker linker4" src="{% static 'assets/link.png' %}" alt="">
+                <div class="data">
+                    <h3><span class="span">6</span> DAO / COMMUNITY</h3>
+                    <p>
+                        Our DAO is called "The Turtles Club", very exclusive DAO, only for The Turtles holders, with the best alpha callers/hunters, you can rent BOTs using TTC Token via The Turtles Club.
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="mbl-maps maps">
+            <div class="map">
+                <div class="data">
+                    <h3><span class="span">7</span> DONATION</h3>
+                    <p>
+                        We will donate 10% of the weekly royalties to NGOs dedicated to taking care of turtles. This is a important act, you should to it too.
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- roadmap -->
+
+
+    <!-- faq -->
+    <div class="faq" id="faq">
+        <div class="heading">
+            <h1>
+                Frequently Asked Questions
+            </h1>
+        </div>
+        <div class="items">
+            <div class="container">
+                <details>
+                    <summary data-aos="zoom-in-up">When & Where launch?</summary>
+                    <div>
+                        <ul>
+                            <li>
+                                Launch target is early/mid October.
+                            </li>
+                            <li> Launchpad: TBD</li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+            <div class="container">
+                <details>
+                    <summary data-aos="zoom-in-up">Mint price & supply?</summary>
+                    <div>
+                        <ul>
+                            <li>
+                                Mint price: TBA -> less than 1 sol...👀
+                            </li>
+                            <li> Supply: TBA</li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+            <div class="container">
+                <details>
+                    <summary data-aos="zoom-in-up">What's Whitelist system?</summary>
+                    <div>
+                        <ul>
+                            <li>
+                                TurtleOG is guaranteed, and will be able to mint in the first phase (Total supply)
+                            </li>
+                            <li>TurtleListed is not guaranteed, and will be able to mint in the second phase (remain
+                                supply)</li>
+                            <li> Public is not guaranteed, and will be able to mint in the third and last mint phase
+                                (remain supply)</li>
+                            <li>Amount of mints per whitelist/role: TBD</li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+            <div class="container">
+                <details>
+                    <summary data-aos="zoom-in-up">Where do the Weekly Royalties go?</summary>
+                    <div>
+                        <ul>
+                            <li>
+                                NFT Royalties will be 10%
+                            </li>
+                            <li> 40% to MarketPlace, add new products.</li>
+                            <li> 30% for The Turtles funds.</li>
+                            <li> 20% to website/marketplace maintenance and DAO/Team payment.</li>
+                            <li> 10% to weekly donation, turtle NGOs</li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+            <div class="container">
+                <details>
+                    <summary data-aos="zoom-in-up">Are you doxxed?
+                    </summary>
+                    <div>
+                        Yes! We are doxxed by Alder Mages.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </div>
+    <!-- faq -->
+
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="footer-social">
+
+            <a href="https://twitter.com/TheTurtlesClub" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+
+            <a href="https://discord.gg/TheTurtles" target="_blank">
+                <i class="fab fa-discord"></i>
+            </a>
+        </div>
+{% endblock body %}
+        <!-- <div class="privacy-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+        </div> -->
+        <div class="copyright">
+            all rights reserved @ 2022 <a href="http://theturtlesnft.com/">Theturtlesnft</a>
+        </div>
+    </div>
+    <!-- footer -->
+
+
+
+
+    <div class="bubbles"></div>
+
+
+
+
+    <script src="{% static 'script.js' %}"></script>
+    <!-- slider lib -->
+    <script src="{% static 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js' %}"></script>
+</body>
+
+</html>
