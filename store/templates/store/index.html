@@ -7,7 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
 </head>
+{% if settings %}
+<title>{{ settings.trade_mark }}</title>
+{% endif %}
 <body>
+    {% if settings %}
+    <h1>{{ settings.trade_mark }}</h1>
+    <h4>{{ settings.slogan }}</h4>
+    {% else %}
+    <h1> TURTLE NFT </h1>
+    {% endif %}
+
+     {# Listing all products #}
     {% block body %}
         <ul>
         <form action="{% url 'search' %}" method="GET">
@@ -29,23 +40,25 @@
         {% endfor %}
         </ul>
     {% endblock body %}
+
+    {# Page pagination #}
     {% block pagination %}
-    {% if is_paginated %}
+    {% if products.has_other_pages %}
         <div class="pagination">
             <span class="page-links">
-                {% if page_obj.has_previous %}
-                    <a href="{{ request.path }}?page={{ page_obj.previous_page_number }}">previous</a>
+                {% if products.has_previous %}
+                    <a href="{{ request.path }}?page={{ products.previous_page_number }}">previous</a>
                 {% endif %}
                 <span class="page-current">
-                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                    Page {{ products.number }} of {{ products.paginator.num_pages }}.
                 </span>
-                {% if page_obj.has_next %}
-                    <a href="{{ request.path }}?page={{ page_obj.next_page_number }}">next</a>
+                {% if products.has_next %}
+                    <a href="{{ request.path }}?page={{ products.next_page_number }}">next</a>
                 {% endif %}
             </span>
         </div>
-    {% endif %}
-  {% endblock pagination %}
+        {% endif %}
+    {% endblock pagination %}
 
 
     

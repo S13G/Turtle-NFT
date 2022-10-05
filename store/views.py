@@ -1,16 +1,38 @@
 from django.contrib import messages
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
+from setting.models import Settings
 from store.models import Product, Category
+
+import os
 
 # Create your views here.
 
-class ProductList(ListView):
-    model = Product
-    template_name = 'store/index.html'
-    paginate_by = 2
-    context_object_name= 'products'
+# Product Listing
+def product_list(request):
+    products_list = Product.objects.select_related('category').all()
+    page = request.GET.get('page', 1)
+    paginator = Paginator(products_list, 5)
+
+    # Page Pagination
+    try:
+        products = paginator.page(page)
+    except PageNotAnInteger:
+        products = paginator.page(1)
+    except EmptyPage:
+        products = paginator.page(paginator.num_pages)
+    
+    #passing website settings dummy stats
+    Settings.objects.get_or_create(id=1)
+    
+    context = {"products": products}
+    context['settings'] = Settings.objects.first()
+
+    if context['settings']:
+        os.environ['web_name'] = context['settings'].title
+    return render(request, 'store/index.html', context)
 
 
 class CategoryList(ListView):
@@ -23,8 +45,8 @@ class ProductDetail(DetailView):
     model = Product
     template_name = 'store/product-detail.html'
 
-
-def CategoryViews(request, slug):
+# Category filter
+def category_view(request, slug):
     try:
         category = Category.objects.get(slug=slug)
     except Category.DoesNotExist:
@@ -33,8 +55,8 @@ def CategoryViews(request, slug):
     context = {"products": products, "category": category}
     return render(request, "store/product-filter.html", context)
 
-
-def SearchView(request):
+# search query
+def search_view(request):
     results = []
     if request.method == "GET":
         query = request.GET.get("q")

@@ -8,7 +8,7 @@ from setting.models import Settings
 class SettingsAdmin(admin.ModelAdmin):
 
     def has_add_permission(self, request) -> bool:
-        return False
+        return False if self.get_queryset(request).count() == 1 else True
     
     def get_actions(self, request):
         actions = super().get_actions(request)

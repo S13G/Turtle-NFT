@@ -129,14 +129,13 @@ MEDIA_URL = "/media/"
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 
-#JAZZMIN
-
+# JAZZMIN SETTINGS
 JAZZMIN_SETTINGS = {
-    "site_title": "Estore Admin",
-    "site_header": "Estore Admin",
-    "site_brand": "Estore Admin",
-    "copyright": "Estore",
-    "welcome_sign": "Login to Estore Admin",
+    "site_title": "Turtle NFT Admin",
+    "site_header": "Turtle NFT Admin",
+    "site_brand": "Turtle NFT Admin",
+    "copyright": "Turtle NFT",
+    "welcome_sign": "Login to Turtle NFT Admin",
     "site_logo": "images/estore.png",
     "login_icon": "images/estore.png",
     "show_ui_builder": False,
@@ -147,6 +146,18 @@ JAZZMIN_UI_TWEAKS = {
     "body_small_text": True,
     # "dark_mode_theme": "darkly",
 }
+
+# WEBSITE SETTINGS
+try:
+    name = os.environ.get('web_name')
+
+    if name:
+        web_name = name
+
+    web_name = "TURTLE NFT"
+
+except:
+    web_name = "TURTLE NFT"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
