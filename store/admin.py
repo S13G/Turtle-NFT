@@ -6,7 +6,6 @@ from store.models import Product, Category
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    autocomplete_fields = ['category']
     date_hierarchy = 'added_on'
     list_display = ['name', 'category', 'price']
     list_per_page = 10
@@ -14,7 +13,7 @@ class ProductAdmin(admin.ModelAdmin):
     ordering = ['name', 'category']
     prepopulated_fields = {'slug': ['name']}
     readonly_fields = ['added_on', 'updated_on']
-    search_fields = ['name__istartswith', 'category__istartswith']
+    search_fields = ['name__istartswith', 'category__name']
 
 
 @admin.register(Category)

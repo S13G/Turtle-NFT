@@ -10,6 +10,17 @@ import os
 
 # Create your views here.
 
+
+class CategoryList(ListView):
+    model = Category
+    template_name = 'store/category.html'
+    context_object_name = 'category'
+
+
+class ProductDetail(DetailView):
+    model = Product
+    template_name = 'store/product-detail.html'
+
 # Product Listing
 def product_list(request):
     products_list = Product.objects.select_related('category').all()
@@ -33,17 +44,6 @@ def product_list(request):
     if context['settings']:
         os.environ['web_name'] = context['settings'].title
     return render(request, 'store/index.html', context)
-
-
-class CategoryList(ListView):
-    model = Category
-    template_name = 'store/category.html'
-    context_object_name = 'category'
-
-
-class ProductDetail(DetailView):
-    model = Product
-    template_name = 'store/product-detail.html'
 
 # Category filter
 def category_view(request, slug):
