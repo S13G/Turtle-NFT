@@ -12,11 +12,11 @@
 <!-- navbar -->
     <section class="header-section">
         
-        <h1>Marketplace</h1>
+        <h1>{{ category.name }}</h1>
         <div class="breadcump-navigation">
             <span>
                 <a href="{% url 'marketplace' %}" class="home-link">Home</a>
-                <a href="#">Explore</a>
+                <a href="#">{{ category.name }}</a>
             </span>
         </div>
         
@@ -81,6 +81,8 @@
                         <h4>{{ product.price }} ${{ product.token }}</h4>
                         <a class="btn1">Buy</a>
                     </div>
+                {% empty %}
+                <h2>No Products under this category</h2>
                 {% endfor %}
               </div>                  
         </div>
