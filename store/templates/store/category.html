@@ -1,0 +1,4 @@
+
+{% for item in category %}
+<li><a href="{% url 'category-filter' item.slug %}">{{ item.name }}</li>
+{% endfor %}
