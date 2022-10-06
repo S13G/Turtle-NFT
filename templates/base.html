@@ -20,6 +20,7 @@
     {% endblock link %}
     <!-- custom css -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'izi/dist/css/iziToast.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/media.css' %}">
     <!-- slider lib -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
@@ -45,8 +46,6 @@
 </head>
 
 <body>
-
-
     <!-- navbar -->
     <div class="navbar">
         <div class="logo">
@@ -67,7 +66,12 @@
             </a>
         </div>
         <div class="btnn">
-            <a href="#" class="btn">Connect Wallet</a>
+            <form action="#" method="POST">
+                {% csrf_token %}
+                <a href="#">
+                    <input type="submit" class="btn" value="Connect Wallet" name="connect"/>
+                </a>
+            </form>
         </div>
     </div>
     <!-- navbar -->
@@ -541,6 +545,29 @@
     <script src="{% static 'js/script.js' %}"></script>
     <!-- slider lib -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+        
+<script src="{% static 'izi/dist/js/iziToast.min.js' %}">  </script>
+
+<script>
+    {% if messages %}
+        {% for message in messages %}
+            {% if message.level == DEFAULT_MESSAGE_LEVELS.INFO %} 
+            iziToast.info({
+                message: '{{message}}',
+                position:  'topCenter',
+                zindex: 999,
+            });
+            {% elif message.level == DEFAULT_MESSAGE_LEVELS.ERROR %} 
+            iziToast.error({
+                title: 'Error:',
+                message: '{{message}}',
+                position:  'topCenter',
+            });
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+</script>
 </body>
 
 </html>

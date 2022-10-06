@@ -83,7 +83,7 @@ body{
 .navbar .logo img{
     width: 4rem;
 }
-.navbar .links{
+.navbar, .links{
     display: flex;
     align-items: center;
     justify-content: space-between;

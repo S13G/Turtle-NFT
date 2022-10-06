@@ -79,7 +79,12 @@
                             <img src="{{ product.image.url }}" alt="">
                         </div>
                         <h4>{{ product.price }} ${{ product.token }}</h4>
-                        <a class="btn1">Buy</a>
+                        <form action="#" method="POST">
+                            {% csrf_token %}
+                            <a href="#">
+                                <input type="submit" class="btn1" value="Buy" name="buy"/>
+                            </a>
+                        </form>
                     </div>
                 {% empty %}
                 <h2>No Products under this category</h2>
