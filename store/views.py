@@ -19,7 +19,7 @@ class CategoryList(ListView):
 
 # Product Listing
 def marketplace(request):
-    products_list = Product.objects.select_related('category').order_by('-added_on').all()
+    products_list = Product.objects.select_related('category').order_by('price').all()
     categories = Category.objects.all()
     connect_button = request.POST.get("connect")
     buy_button = request.POST.get("buy")
