@@ -10,7 +10,7 @@ import os
 
 # Create your views here.
 
-
+# Category List
 class CategoryList(ListView):
     model = Category
     template_name = 'store/category.html'
@@ -27,9 +27,8 @@ def marketplace(request):
         messages.info(request, "Not available")
     elif buy_button:
         messages.error(request, "Not available")
-    
+     
     # Page Pagination
-    
     page = request.GET.get('page', 1)
     paginator = Paginator(products_list, 16)
 
