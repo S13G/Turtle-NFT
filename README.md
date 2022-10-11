@@ -7,16 +7,16 @@ Project also include an **api** which developers can fetch data from
 
 Turtles Nft is built using
 
-- **HTML5**,
-  ![HTML]
-- **CSS**,
-  ![CSS]
-- **JAVASCRIPT**,
-  ![JS]
-- **DJANGO**,
-  ![DJANGO]
+- **HTML5**
+![HTML5]
+- **CSS**
+![CSS]
+- **JAVASCRIPT**
+![JS]
+- **DJANGO**
+![DJANGO]
 - **DJANGO REST FRAMEWORK**
-  ![DRF]
+![DRF]
 
 ### Installation
 
