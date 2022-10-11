@@ -51,12 +51,10 @@ INSTALLED_APPS = [
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
-    'http://127.0.0.1:8000'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:3000',
-    'http://127.0.0.1:8000'
 ]
 
 CORS_ALLOW_HEADERS = (
@@ -84,7 +82,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # 'api.middleware.AuthorizedOriginMiddleware',
+    'api.middleware.AuthorizedOriginMiddleware',
 ]
 
 ROOT_URLCONF = 'turtle_nft.urls'
