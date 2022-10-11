@@ -4,11 +4,11 @@ Project also include an **api** which developers can fetch data from
 
 ## Tools/Frameworks built with
 Turtles Nft is built using 
-**HTML5**
-**CSS**
-**JAVASCRIPT**
-**DJANGO**
-**DJANGO REST FRAMEWORK**
+- **HTML5**,
+- **CSS**,
+- **JAVASCRIPT**,
+- **DJANGO**,
+- **DJANGO REST FRAMEWORK**
 
 ### Installation
 To run this project on your machine. Make sure you have __python3__ installed on your machine.
