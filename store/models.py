@@ -28,3 +28,20 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Transaction(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='transaction')
+    discord_link = models.CharField(max_length=500, null=True)
+    wallet_address = models.CharField(max_length=10000, null=True)
+    added_on = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ('-added_on',)
+    
+    def __str__(self):
+        return f"Discord Buyer {self.discord_link} purchased {self.product.id}"
+    
+    def product_id(self):
+        return self.product.id
+    
