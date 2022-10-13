@@ -4,7 +4,7 @@ from rest_framework.filters import SearchFilter
 from rest_framework.response import Response
 from rest_framework.generics import ListAPIView
 from rest_framework.views import APIView
-from api.serializers import ProductSerializer, TransactionSerializer
+from api.serializers import ProductSerializer
 
 from store.models import Category, Product, Transaction
 
