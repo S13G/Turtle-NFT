@@ -31,7 +31,7 @@ class CategoryAdmin(admin.ModelAdmin):
 class Transactions(admin.ModelAdmin):
     list_display = ['discord_link', 'wallet_address', 'product_id']
     readonly_fields = ['discord_link', 'wallet_address']
-    search_fields = ['discord_link', 'product_id']
+    search_fields = ['discord_link', 'product_id', 'block_hash']
 
     def has_add_permission(self, request):
         return False

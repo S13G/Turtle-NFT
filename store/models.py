@@ -31,6 +31,7 @@ class Product(models.Model):
 
 
 class Transaction(models.Model):
+    block_hash = models.CharField(max_length=1000, null=True)
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='transaction')
     discord_link = models.CharField(max_length=500, null=True)
     wallet_address = models.CharField(max_length=10000, null=True)
