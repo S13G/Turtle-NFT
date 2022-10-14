@@ -44,7 +44,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Transaction)
 class Transactions(admin.ModelAdmin):
-    list_display = ['discord_link', 'wallet_address', 'product_id']
+    list_display = ['transaction_id', 'discord_link', 'wallet_address', 'product_id']
     readonly_fields = ['discord_link', 'wallet_address']
     search_fields = ['discord_link', 'product_id', 'block_hash']
 

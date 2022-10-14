@@ -46,3 +46,5 @@ class Transaction(models.Model):
     def product_id(self):
         return self.product.id
     
+    def transaction_id(self):
+        return f" Transaction {self.id}"

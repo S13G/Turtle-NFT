@@ -48,7 +48,7 @@ class ProductTransaction(APIView):
             try:
                 product = Product.objects.get(id=data.get('product_id'))
             except Product.DoesNotExist:
-                return Response('There\'s no product with that id', status=400)
+                return Response('Product with this ID does not exist', status=400)
             Transaction.objects.create(block_hash=data.get('block_hash'), discord_link=data.get('discord_link'),
             wallet_address=data.get('wallet_address'), product=product)
             return Response('Transaction successful', status=200)
