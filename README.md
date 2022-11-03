@@ -23,10 +23,11 @@ Turtles Nft is built using
  
   ![DRF](https://github.com/S13G/Turtle-NFT/blob/main/assets/rsz_drf.png)
   
-  - **REACT**
+- **REACT**
 
   ![REACT](https://github.com/S13G/Connecto-API/blob/main/assets/rsz_react.png)
-  https://github.com/Tosinpeter/Theturtlesnft.git
+
+https://github.com/Tosinpeter/Theturtlesnft.git
 
 
 
