@@ -22,6 +22,13 @@ Turtles Nft is built using
 - **DJANGO REST FRAMEWORK**
  
   ![DRF](https://github.com/S13G/Turtle-NFT/blob/main/assets/rsz_drf.png)
+  
+  - **REACT**
+
+  ![REACT](https://github.com/S13G/Connecto-API/blob/main/assets/rsz_react.png)
+  https://github.com/Tosinpeter/Theturtlesnft.git
+
+
 
 ### Installation
 
